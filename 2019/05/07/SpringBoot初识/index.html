@@ -1,0 +1,888 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      Boot初识 | Zora
+    
+  </title>
+  <meta name="author" content="Zora">
+  <meta name="keywords" content>
+  <meta name="description" content="my blogs">
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/Annie.css">
+  
+  <!-- jquery -->
+	<script src="/js/jquery.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+</head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/1.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<!-- Logo and navigation -->
+		<div class="h-header">
+			<div id="logo">
+				<a href="/">
+						
+						<img src="/img/logo.png" alt="Logo">
+					
+				</a>
+			</div>
+			
+			<div id="navigation-show">
+				<ul>
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home">主页</a>
+		</li>
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive">归档</a>
+		</li>
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories">分类</a>
+		</li>
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags">标签</a>
+		</li>
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about">关于</a>
+		</li>
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery">相册</a>
+		</li>
+	
+
+	
+</ul>
+			</div>				
+		</div>
+
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<p class="motto"></p>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down" aria-hidden="true"></i>
+			</a>
+
+			
+				<!-- 
+	This is only a demo, please go to "https://time.is" to set your city time! 
+-->
+<style type="text/css">
+	.header-date {
+		font-size: 1.6rem;
+		color: #fff;
+		position: absolute;
+		bottom: 5px;
+		right: 1rem;
+		writing-mode: tb-rl;
+	}	
+	
+	.header-date a {
+		border-bottom: none;
+	}
+
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			font-size: 1rem;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+			
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><h1>0.0%</h1></div>
+
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			当前文章&nbsp;:&nbsp;《Boot初识》
+		
+	</p>
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home">主页</a>
+		</li>
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive">归档</a>
+		</li>
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories">分类</a>
+		</li>
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags">标签</a>
+		</li>
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about">关于</a>
+		</li>
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery">相册</a>
+		</li>
+	
+
+	
+</ul>
+	</div>
+	<div class="nav-footer">
+		<ul>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-github"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-weibo"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<i class="fa fa-rss"></i>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+	<div class="article-title">
+		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+		
+	<a href="/2019/05/07/SpringBoot初识/" itemprop="url">
+		Boot初识
+	</a>
+
+	</div>
+
+	<div class="article-meta">
+		<span>
+			<i class="fa fa-calendar"></i>
+			
+
+
+	发布于
+
+	<a href="/2019/05/07/SpringBoot初识/" itemprop="url">
+		<time datetime="2019-05-07T12:11:26.000Z" itemprop="datePublished">
+	  		2019-05-07
+	  </time>
+	</a>
+	&nbsp;
+
+
+
+
+
+			
+
+
+
+
+	更新于
+
+	<a href="/2019/05/07/SpringBoot初识/" itemprop="url">
+		<time datetime="2019-05-07T12:11:26.000Z" itemprop="dateUpdated">
+	  		2019-05-09
+	  </time>
+	</a> 
+
+
+
+		</span>
+		<span>
+			<i class="fa fa-tags"></i>
+			
+	
+		<a href="/tags/springBoot/" class=" ">
+			springBoot
+		</a>
+	
+		<a href="/tags/小白/" class=" ">
+			小白
+		</a>
+	
+		<a href="/tags/手把手教/" class=" ">
+			手把手教
+		</a>
+	
+		
+		</span>
+		
+		
+
+
+
+	</div>
+
+	<div class="article-content" id="article-content">
+		<h1 id="SpringBoot-初识"><a href="#SpringBoot-初识" class="headerlink" title="SpringBoot 初识"></a>SpringBoot 初识</h1><p><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2t2hi9agej30fe035jrb.jpg" alt></p>
+<h2 id="Spring-Boot-概述"><a href="#Spring-Boot-概述" class="headerlink" title="Spring Boot 概述"></a>Spring Boot 概述</h2><p> Spring Boot 是所有基于 Spring 开发的项目的起点。Spring Boot 的设计是为了让你尽可能快的跑起来 Spring 应用程序并且尽可能减少你的配置文件。</p>
+<h2 id="Spring-Boot-快速搭建"><a href="#Spring-Boot-快速搭建" class="headerlink" title="Spring Boot 快速搭建"></a>Spring Boot 快速搭建</h2><h4 id="第一步：新建项目"><a href="#第一步：新建项目" class="headerlink" title="第一步：新建项目"></a>第一步：新建项目</h4><ul>
+<li><strong>选择 Spring Initializr ，然后选择默认的 url 点击【Next】：</strong></li>
+</ul>
+<p><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2t2ht65nmj30fe0ez3zl.jpg" alt></p>
+<ul>
+<li><strong>然后修改一下项目的信息：</strong></li>
+</ul>
+<p><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2t2inmpd0j30fe0ez74z.jpg" alt></p>
+<ul>
+<li><strong>勾选上 Web 模板：</strong></li>
+</ul>
+<p><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2t2iyma5bj30fe0ezgn7.jpg" alt></p>
+<ul>
+<li><strong>选择好项目的位置，点击【Finish】：选择好项目的位置，点击【Finish】：</strong></li>
+</ul>
+<p><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2t2jfkm8pj30fe0ezwep.jpg" alt></p>
+<ul>
+<li><strong>如果是第一次配置 Spring Boot 的话可能需要等待一会儿 IDEA 下载相应的 依赖包，默认创建好的项目结构如下：</strong></li>
+</ul>
+<p><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2t2jolov9j30ag0eajsk.jpg" alt></p>
+<blockquote>
+<p>DemoApplication： 一个带有 main() 方法的类，用于启动应用程序<br>DemoApplicationTests：一个空的 Junit 测试文件<br>application.properties：一个空的 properties 文件，可以根据需要添加配置属性<br>pom.xml： Maven 构建说明文件</p>
+</blockquote>
+<h4 id="第二步：代码详解"><a href="#第二步：代码详解" class="headerlink" title="第二步：代码详解"></a>第二步：代码详解</h4><ul>
+<li><strong>整个项目完成后的结构图：</strong></li>
+</ul>
+<p><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2t67k7kndj30d90njwf7.jpg" alt></p>
+<ol>
+<li><p>java 文件夹（代码）：</p>
+<ul>
+<li>com.zora.example:自定义包名</li>
+<li>controller：控制器，</li>
+<li>entity：实体，</li>
+<li>mapper：与数据库进行操作的类，</li>
+<li>service：处理后台逻辑，</li>
+<li>ExampleApplication：应用程序启动类</li>
+</ul>
+</li>
+<li><p>resources 文件夹（资源）：</p>
+<ul>
+<li>mybatis：与数据库进行相关操作，</li>
+<li>mapper：具体数据库操作的xml，</li>
+<li>mybatis-config.xml：mybatis配置文件，</li>
+<li>static：图片，css等静态资源文件，</li>
+<li>templates：放html等模板，</li>
+<li>application.properties：常量，数据库配置等放在这里。</li>
+<li>messages.properties：thymeleaf模板引擎的配置文件。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><strong>Controller</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">public class MainController &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private AddPart addPart;</span><br><span class="line">    @PostMapping(&quot;/addemp&quot;)</span><br><span class="line">    public String addEmp(@ModelAttribute(value = &quot;emp&quot;) Emp emp)&#123;</span><br><span class="line">        addPart.addEmp(emp);</span><br><span class="line">        return &quot;redirect:/&quot;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(&quot;/&quot;)</span><br><span class="line">    public ModelAndView index(String keyword) &#123;</span><br><span class="line">        ModelAndView mav = new ModelAndView(&quot;index&quot;);</span><br><span class="line">        List&lt;Emp&gt; filter = new ArrayList&lt;&gt;();</span><br><span class="line">        List&lt;Emp&gt; emps = new ArrayList&lt;&gt;();</span><br><span class="line">        //没有keyword关键字时，查询全部</span><br><span class="line">        emps = addPart.findAll();</span><br><span class="line">        if(keyword == null || keyword.trim().equals(&quot;&quot;))&#123;</span><br><span class="line">            filter = emps;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            for(Emp emp : emps)&#123;</span><br><span class="line">                if(emp.getEname().toLowerCase().indexOf(keyword.toLowerCase()) != -1)&#123;</span><br><span class="line">                    filter.add(emp);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        mav.addObject(&quot;emps&quot; , filter);</span><br><span class="line">        return mav;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @GetMapping(&quot;/add&quot;)</span><br><span class="line">    public String add(@ModelAttribute(value = &quot;emp&quot;)Emp emp ,BindingResult result)&#123;</span><br><span class="line">        return &quot;add&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    //只需要加上下面这段即可，注意不能忘记注解</span><br><span class="line">    @InitBinder</span><br><span class="line">    public void initBinder(WebDataBinder binder, WebRequest request) &#123;</span><br><span class="line">        //转换日期</span><br><span class="line">        DateFormat dateFormat=new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);</span><br><span class="line">        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));// CustomDateEditor为自定义日期编辑器</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>用@Controller注解使spring框架可以识别它，MainController类中有AddPart属性，使用@Autowired自动注入，这个类中有两个方法，一个是addEmp,@PostMapping注解表示用post提交,url为“/addemp”,方法里面是具体的逻辑操作，将emp存入数据库中，然后返回首页。另一个方法index,有一个参数keyword，返回ModelAndView，方法中如果没有keyword就查询全部数据，如果有keyword就查找特定的数据。</p>
+</blockquote>
+<ul>
+<li><strong>Entity：</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class Dept &#123;</span><br><span class="line">    private Integer deptno;</span><br><span class="line">    private String dname;</span><br><span class="line">    private String loc;</span><br><span class="line"></span><br><span class="line">    public Dept(Integer deptno, String dname, String loc) &#123;</span><br><span class="line">        this.deptno = deptno;</span><br><span class="line">        this.dname = dname;</span><br><span class="line">        this.loc = loc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Emp &#123;</span><br><span class="line">    private Integer empno;</span><br><span class="line">    private String ename;</span><br><span class="line">    private String job;</span><br><span class="line">    private Integer mgr;</span><br><span class="line">    private Date hiredate;</span><br><span class="line">    private Float sal;</span><br><span class="line">    private Float comm;</span><br><span class="line">    private Integer deptno;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这两个是数据库对应的实体类，每个属性都有对应的get和set方法,由于get和set方法太长，我把它删了。请自行自动生成。</p>
+</blockquote>
+<ul>
+<li><strong>Service：</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//面向接口编程</span><br><span class="line">public interface AddPart &#123;</span><br><span class="line">    boolean addEmp(Emp emp);</span><br><span class="line">    List&lt;Emp&gt; findAll();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>service的接口，这样做的目的是为了解耦。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Service</span><br><span class="line">public class AddPartImp implements AddPart &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private AddpartMapper addpartMapper;</span><br><span class="line">    @Override</span><br><span class="line">    public boolean addEmp(Emp emp) &#123;</span><br><span class="line">        addpartMapper.addEmp(emp);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public List&lt;Emp&gt; findAll() &#123;</span><br><span class="line">        return addpartMapper.findAll();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>实现了AddPart接口，完成了具体的逻辑。</p>
+</blockquote>
+<ul>
+<li><strong>Mapper：</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@Mapper</span><br><span class="line">public interface AddpartMapper &#123;</span><br><span class="line"></span><br><span class="line">    public void addEmp(Emp emp);</span><br><span class="line"></span><br><span class="line">    public List&lt;Emp&gt; findAll();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>service中调用这个类与数据库进行操作。</p>
+<blockquote>
+<p>在启动类中添加注解<code>@MapperScan(&quot;com.zora.example.mapper&quot;)</code><br>MapperScan注解会在SpringBoot启动的时候扫描mapper包，并根据xml自动生成对应的实现类</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p><strong>Resources：</strong></p>
+<ol>
+<li><p>Mapper</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper</span><br><span class="line">        PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span><br><span class="line">        &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span><br><span class="line">&lt;!-- 映射文件配置，namespace指向接口 --&gt;</span><br><span class="line">&lt;mapper namespace=&quot;com.zora.example.mapper.AddpartMapper&quot;&gt;</span><br><span class="line">    &lt;!--</span><br><span class="line">        select标签代表查询</span><br><span class="line">        findById要与接口中的方法名一致</span><br><span class="line">    --&gt;</span><br><span class="line">    &lt;select id=&quot;findById&quot; parameterType=&quot;Integer&quot; resultType=&quot;com.zora.example.entity.Emp&quot;&gt;</span><br><span class="line">        select * from emp where empno = #&#123;value&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">    &lt;!-- selectKey代表将id回填，Last_Insert_ID用于获取最新插入的id select Last_Insert_ID()是mysql的内置函数 --&gt;</span><br><span class="line">    &lt;insert id=&quot;addEmp&quot; parameterType=&quot;com.zora.example.entity.Emp&quot;&gt;</span><br><span class="line">        INSERT INTO `scott`.`emp` ( `ename`, `job`, `mgr`, `hiredate`, `sal`, `comm`, `deptno`)</span><br><span class="line">        VALUES (#&#123;ename&#125;, #&#123;job&#125;, #&#123;mgr&#125;, #&#123;hiredate&#125;, #&#123;sal&#125;, #&#123;comm&#125;, #&#123;deptno&#125;)</span><br><span class="line">        &lt;selectKey keyProperty=&quot;empno&quot; keyColumn=&quot;empno&quot; resultType=&quot;Integer&quot; order=&quot;AFTER&quot;&gt;</span><br><span class="line">            select Last_Insert_ID()</span><br><span class="line">        &lt;/selectKey&gt;</span><br><span class="line">    &lt;/insert&gt;</span><br><span class="line">    &lt;select id=&quot;findAll&quot; resultType=&quot;com.zora.example.entity.Emp&quot;&gt;</span><br><span class="line">        select * from emp</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>html<br><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2vbxxiiymj30710dqq38.jpg" alt></p>
+<blockquote>
+<p>一些页面的设计代码。由于主要讲的是spring boot，有关于页面设计的部分就不放了，想要源码的旁友们，我把代码放在了我的GitHub上。</p>
+</blockquote>
+</li>
+<li><p>properties</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">spring.thymeleaf.cache=false</span><br><span class="line">#DataSource</span><br><span class="line">spring.datasource.driver-class-name=com.mysql.jdbc.Driver</span><br><span class="line">spring.datasource.url=jdbc:mysql://localhost:3306/scott?useUnicode=true&amp;characterEncoding=utf-8</span><br><span class="line">spring.datasource.username=root</span><br><span class="line">spring.datasource.password=root</span><br><span class="line"></span><br><span class="line">#mybatis</span><br><span class="line">#Core Config File</span><br><span class="line">#start with /</span><br><span class="line">mybatis.config-location=classpath:/mybatis/mybatis-config.xml</span><br><span class="line">mybatis.mapper-locations=classpath:/mybatis/mapper/*.xml</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>application.properties 文件中，server.port=8082改变端口号，取消thymeleaf缓存，数据库的相关配置，以及mapper对应文件夹的配置。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.report.name=Zora</span><br><span class="line">app.website=http://www.baidu.com</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>messages.properties文件中，一些常量的赋值。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="第三步：利用-IDEA-启动-Spring-Boot"><a href="#第三步：利用-IDEA-启动-Spring-Boot" class="headerlink" title="第三步：利用 IDEA 启动 Spring Boot"></a>第三步：利用 IDEA 启动 Spring Boot</h4><p>我们回到 DemoApplication 这个类中，然后右键点击运行：<br><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2vc36hnyvj30j60gf75i.jpg" alt></p>
+<blockquote>
+<p>之所以在上面的项目中没有手动的去配置 Tomcat 服务器，是因为 Spring Boot 内置了 Tomcat</p>
+</blockquote>
+<p><strong>启动成功!</strong><br><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2vc4ou7d0j31dy0ehgo3.jpg" alt></p>
+<blockquote>
+<p>端口是8082</p>
+</blockquote>
+<p><strong>成功访问</strong><br><img src="https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2vc5r1io9j31h90pvtc7.jpg" alt></p>
+<font color="#E9967A" size="5" face="微软雅黑">over!不容易啊！不容易！这是搭完网站后第一个个博客！撒花~纪念一下。希望之后能坚持写博客（咕咕咕）。写博客的目的单纯的就是整理自己的知识点以及分享给大家我学到的东西，毕竟！不爱开源的程序员不是好的程序媛！（我说的！理不直气也壮！）希望我写的东西有帮助到你们！ end</font>
+	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<div>评论</div>
+				<div>分享</div>
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+			
+	</span>
+
+
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	
+		<div>Please check the post_relate setting in config.yml of hexo-theme-Annie! You should make sure 'postsEnable == true' and the number of site posts greater than 1.</div>	
+	
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- gitalk comment -->
+			<!-- show gitalk comment -->
+<div id="gitalk-container"></div>
+
+<!-- gitalk`s css & js -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<link rel="stylesheet" href="/css/comment.css">
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="text/javascript">
+	//Thanks O-R
+	//https://github.com/gitalk/gitalk/issues/102#issuecomment-382970552
+	//去除尾部匹配正则数组的字符串  
+	//Remove redundant characters
+	String.prototype.trimEnd = function(regStr) {
+		var result = this;
+		if(regStr == undefined || regStr == null || regStr == "") {
+			return result;
+		}
+		var array = regStr.split(',');
+
+		if(array.length > 0) {
+
+			var c = array.shift();
+			var str = this;
+			var i = str.length;
+			var rg = new RegExp(c);
+			var matchArr = str.match(rg);
+
+			if(matchArr != undefined && matchArr != null && matchArr.length > 0) {
+				var matchStr = matchArr[0].replace(/\\/g, "\\\\").replace(/\*/g, "\\*")
+					.replace(/\+/g, "\\+").replace(/\|/g, "\\|")
+					.replace(/\{/g, "\\{").replace(/\}/g, "\\}")
+					.replace(/\(/g, "\\(").replace(/\)/g, "\\)")
+					.replace(/\^/g, "\\^").replace(/\$/g, "\\$")
+					.replace(/\[/g, "\\[").replace(/\]/g, "\\]")
+					.replace(/\?/g, "\\?").replace(/\,/g, "\\,")
+					.replace(/\./g, "\\.").replace(/\&/g, "\\&");
+				matchStr = matchStr + '$';
+				result = str.replace(new RegExp(matchStr), "");
+			}
+
+			if(array.length > 0) {
+				return result.trimEnd(array.join())
+			} else {
+				return result;
+			}
+		}
+	};
+
+	//Create gitalk
+	var gitalk = new Gitalk({
+		clientID: '3dbced5eef3f83726c9e',
+		clientSecret: '15cfb1745ead189a8e87d5a5f156b348020bf8c9',
+		//id: window.location.pathname,
+		//id: decodeURI(window.location.pathname),
+		//id: (window.location.pathname).split("/").pop().substring(0, 49),
+		id: decodeURI( md5( location.href.trimEnd('#.*$,\\?.*$,index.html$') ) ),
+		repo: 'Myblog-Gitalk',
+		owner: 'Zoracxz',
+		admin: 'Zoracxz',
+		distractionFreeMode: 'true',
+	})
+	gitalk.render('gitalk-container');
+</script>
+
+		
+		
+	
+
+</div>
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+			</div>
+		</div>	
+	</div>
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+
+<!-- show math formula -->
+
+
+
+	 
+	<script src="/plugin/clipboard/clipboard.js"></script>
+	<script>
+		// Copy code !
+	    function codePreprocessing() {
+	        $("#article-content .highlight").each(function() {
+
+	            $(this).wrap('<div id="post-code"></div>');
+
+	        })
+
+	        $("#article-content #post-code").each(function() {
+
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            var temp = $(this).next().attr('class'),
+	                language = ((temp.length > 9) && (temp != null)) ? temp.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+
+	            $(this).append('<span class="copy-btn"><i class="fa fa-copy" aria-hidden="true"></i></span>');
+
+	        });
+	    }
+
+		function codeCopy() {
+		    $('#article-content #post-code').each(function(i) {
+		        var codeCopyId = 'codeCopy-' + i;
+
+		        var codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+
+		    
+			var clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn copy-status');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');
+			    
+			});
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		
+
+		}
+
+		if ($('.layout-post').length) {
+		    codePreprocessing();
+		    codeCopy();
+		} 
+	</script>
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+	var titleID = $('.article-title a'),
+		imageID = $('.article-content img'),
+		videoID = $('.article-content video');
+
+	var postTitle = titleID.text() ? titleID.text() : "No post title!";
+
+	imageID.each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+
+		//给每个匹配的<img>元素打包, 即添加父元素<a>
+		$(this).wrap('<a data-fancybox="gallery" data-caption=" 《 ' + postTitle + ' 》 ' + imgTitle + ' "  href=" ' + imgPath + ' "> </a>');
+	});
+
+	videoID.each(function() {
+		var videoPath = $(this).attr('src');
+
+		//给每个匹配的<img>元素打包, 即添加父元素<a>
+		$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+	});
+	//TODO：支持html5 video
+
+	if($('#layout-post').length) {
+		$('[data-fancybox="gallery"]').fancybox({
+			loop: true,
+			buttons: [
+				"zoom",
+				"share",
+				"slideShow",
+				"fullScreen",
+				//"download",
+				"thumbs",
+				"close"
+			],
+			protect: false
+		});
+	}
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-github"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-weibo"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<i class="fa fa-rss"></i>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2019, content by Zora. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+		</p>
+		<p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> <a href="https://github.com/Zoracxz" title="github" target="_blank" rel="noopener">github</a> by Zora.
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>		
+		</p>
+	</div>		
+</footer>
+		
+	<!-- set '1' to show motto in all pages! -->
+
+	<script src="/plugin/motto/motto.js"></script>
+	
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+
+<!-- love effect -->
+
+	<script src="/plugin/love/love.js"></script>
+
+
+<!-- back to top -->
+
+	
+	<div id="totop">
+  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
+	</div>
+
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<script src="/plugin/vibrant/vibrant.js"></script>
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imgLazyLoader/yall.min.js"></script>
+<script src="/plugin/imgResize/jquery.resizeimagetoparent.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/js/resizediv.js"></script>
+<script src="/js/main.js"></script>
+	</body>	
+</html>
