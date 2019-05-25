@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Spring实战&lt;一&gt; 读书笔记 | Zora
+      python爬取Unsplash以json格式写入文件 | Zora
     
   </title>
   <meta name="author" content="Zora">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《Spring实战&lt;一&gt; 读书笔记》
+			当前文章&nbsp;:&nbsp;《python爬取Unsplash以json格式写入文件》
 		
 	</p>
 
@@ -258,18 +258,6 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
-
-	
-		<div class="layout-toc">
-			<div id="layout-toc">
-				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-			</div>
-		</div>
-
-		
-		<script src="/plugin/toc/katelog.min.js"></script>
-
-		
 	 
 
 <div class="layout-post">
@@ -277,8 +265,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/05/11/Spring实战-一-读书笔记/" itemprop="url">
-		Spring实战&lt;一&gt; 读书笔记
+	<a href="/2019/05/13/python爬取Unsplash以json格式写入文件/" itemprop="url">
+		python爬取Unsplash以json格式写入文件
 	</a>
 
 	</div>
@@ -291,9 +279,9 @@
 
 	发布于
 
-	<a href="/2019/05/11/Spring实战-一-读书笔记/" itemprop="url">
-		<time datetime="2019-05-11T11:08:29.000Z" itemprop="datePublished">
-	  		2019-05-11
+	<a href="/2019/05/13/python爬取Unsplash以json格式写入文件/" itemprop="url">
+		<time datetime="2019-05-13T03:01:59.000Z" itemprop="datePublished">
+	  		2019-05-13
 	  </time>
 	</a>
 	&nbsp;
@@ -309,9 +297,9 @@
 
 	更新于
 
-	<a href="/2019/05/11/Spring实战-一-读书笔记/" itemprop="url">
-		<time datetime="2019-05-11T11:08:29.000Z" itemprop="dateUpdated">
-	  		2019-05-11
+	<a href="/2019/05/13/python爬取Unsplash以json格式写入文件/" itemprop="url">
+		<time datetime="2019-05-13T03:01:59.000Z" itemprop="dateUpdated">
+	  		2019-05-14
 	  </time>
 	</a> 
 
@@ -322,12 +310,20 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/Spring实战/" class=" ">
-			Spring实战
+		<a href="/tags/python/" class=" ">
+			python
 		</a>
 	
-		<a href="/tags/读书笔记/" class=" ">
-			读书笔记
+		<a href="/tags/Unsplash/" class=" ">
+			Unsplash
+		</a>
+	
+		<a href="/tags/爬虫/" class=" ">
+			爬虫
+		</a>
+	
+		<a href="/tags/写入文件/" class=" ">
+			写入文件
 		</a>
 	
 		
@@ -336,7 +332,7 @@
 		
 
 	
-    <span class="leancloud_visitors" id="/2019/05/11/Spring实战-一-读书笔记/_visitors" data-url="/2019/05/11/Spring实战-一-读书笔记/" data-title="Spring实战<一> 读书笔记">
+    <span class="leancloud_visitors" id="/2019/05/13/python爬取Unsplash以json格式写入文件/_visitors" data-url="/2019/05/13/python爬取Unsplash以json格式写入文件/" data-title="python爬取Unsplash以json格式写入文件">
        	<i class="fa fa-eye"></i>
        	热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
@@ -346,7 +342,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2019/05/11/Spring实战-一-读书笔记/_likes" data-url="/2019/05/11/Spring实战-一-读书笔记/" data-title="Spring实战<一> 读书笔记" rel="unlike">
+    <span class="leancloud_likes" id="/2019/05/13/python爬取Unsplash以json格式写入文件/_likes" data-url="/2019/05/13/python爬取Unsplash以json格式写入文件/" data-title="python爬取Unsplash以json格式写入文件" rel="unlike">
         <i class="fa fa-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -355,72 +351,7 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h1><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ol>
-<li>依赖注入<ul>
-<li>目的：解耦</li>
-<li>方式：构造器注入</li>
-</ul>
-</li>
-<li><p>装配（wiring）</p>
-<ul>
-<li><p>XML方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;knight&quot; class=&quot;com.springinaction.knights.BraveKnight&quot;&gt;</span><br><span class="line">    &lt;constructor-arg ref=&quot;quest&quot; /&gt;      &lt;!--注入Quest bean--&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line">&lt;bean id=&quot;quest&quot; class=&quot;com.springinaction.knights.SlayDragonQuest&quot;&gt;</span><br><span class="line">    &lt;constructor-arg value=&quot;#&#123;T(System).out&#125;&quot; /&gt;     &lt;!--创建SlayDragonQuest--&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用Java配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class KnightConfig &#123;</span><br><span class="line">    @Bean</span><br><span class="line">    public Knight knight() &#123;</span><br><span class="line">        return new BraveKnight(quest());</span><br><span class="line">    &#125;</span><br><span class="line">    @Bean </span><br><span class="line">    public  Quest quest() &#123;</span><br><span class="line">        return new SlayDragonQuest(System.out);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>如何工作：通过应用上下文（Application Context)</p>
-</blockquote>
-<blockquote>
-<p>XML对应ClassPathXmlApplicationContext</p>
-</blockquote>
-<blockquote>
-<p>代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class KnightMain &#123;</span><br><span class="line">public static void main(String[] args) throws Exception &#123;</span><br><span class="line">    //加载spring上下文</span><br><span class="line">    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(&quot;META-INF/Spring/knights.xml&quot;);</span><br><span class="line">    Knight knight = context.getBean(Knight.class); //获取knight bean</span><br><span class="line">    knight.embarkOnQuest();</span><br><span class="line">    context.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>应用切面</p>
-<ul>
-<li>AOP：分离复用</li>
-<li>AOP应用：<blockquote>
-<p>抽象为一个切面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;minstrel&quot; class=&quot;com.springinaction.knights.Minstrel&quot;&gt;</span><br><span class="line">    &lt;constructor-arg value=&quot;#&#123;T(System).out&#125;&quot; /&gt;      &lt;!--声明Minstrel bean--&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line">&lt;aop:config&gt;</span><br><span class="line">    &lt;aop:aspect ref=&quot;minstrel&quot;&gt;</span><br><span class="line">    &lt;aop:pointcut id=&quot;embark&quot; expression=&quot;execution(* *.embarkOnQuest(..))&quot; /&gt;  &lt;!--定义切点--&gt;</span><br><span class="line">    &lt;aop:before pointcut-ref=&quot;embark&quot; method=&quot;singBeforeQuest&quot; /&gt;  &lt;!--声明前置通知--&gt;</span><br><span class="line">    &lt;aop:after pointcut-ref=&quot;embark&quot; method=&quot;singAfterQuest&quot; /&gt;   &lt;!--声明后置通知--&gt;</span><br><span class="line">    &lt;/aop:aspect&gt;</span><br><span class="line">&lt;/aop:config&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>使用模板消除样式代码</p>
-<blockquote>
-<p>JdbcTemplate</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public Employee getEmployeeById(long id) &#123;</span><br><span class="line">    return jdbcTemplate.queryForObject(</span><br><span class="line">        &quot;select id, firstname, lastname, salary from employee where id=?&quot;,</span><br><span class="line">        new RowMapper&lt;Employee&gt;() &#123;</span><br><span class="line">            public Employee mapRow(ResultSet rs, int rowNum) throws SQLException &#123;</span><br><span class="line">                Employee employee = new Employee();</span><br><span class="line">                employee.setId(rs.getLong(&quot;id&quot;));</span><br><span class="line">                employee.setFirstname(rs.getString(&quot;firstname&quot;));</span><br><span class="line">                employee.setLastname(rs.getString(&quot;lastname&quot;));</span><br><span class="line">                employee.setSalary(rs.getBigDecimal(&quot;salary&quot;));</span><br><span class="line">                return employee;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,id);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>Spring容器</p>
-<ul>
-<li>bean工厂</li>
-<li>应用上下文<blockquote>
-<p>i. AnnotationConfigApplicationContext：从一个或多个基于Java配置类中加载Spring应用上下文</p>
-<blockquote>
-<p>ii. AnnotationConfigWebApplicationContext：从一个或多个基于Java配置类中加载Spring Web应用上下文</p>
-<blockquote>
-<p>iii. ClassPathXmlApplicationContext：从类路径下的一个或多个XML配置文件中加载上下文定义，把应用上下文的定义文件作为类资源</p>
-<blockquote>
-<p>iv. FileSystemXmlApplicationContext：从文件系统下的一个或多个XML配置文件中加载上下文</p>
-<blockquote>
-<p>v. XmlWebApplicationContext：从Web应用下的一个或多个XML配置文件中加载上下文定义 </p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<p>待更。。。</p>
-	
+			
 	</div>
 	
 	<div id="current-post-cover" data-scr="/img/blogs/spring.jpg"></div>
@@ -438,12 +369,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/05/13/python爬取Unsplash以json格式写入文件/" title="python爬取Unsplash以json格式写入文件" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/05/07/SpringBoot初识/" title="SpringBoot初识" rel="next">
+			<a href="/2019/05/11/Spring实战-一-读书笔记/" title="Spring实战<一> 读书笔记" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -464,22 +391,31 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/05/13/python爬取Unsplash以json格式写入文件/" title="python爬取Unsplash以json格式写入文件">
-								python爬取Unsplash以json格式写入文件			
-							</a>
+							<a class="relate-post-title" href="/2019/05/11/Spring实战-一-读书笔记/" title="Spring实战<一> 读书笔记">
+								Spring实战<一> 读书笔记			
+							</一></a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								五月 13日, 2019				
+								五月 11日, 2019				
 							</p>
 							<p class="relate-post-content">
-								
+								第一部分第一章
+依赖注入
+目的：解耦
+方式：构造器注入
+
+
+装配（wiring）
+
+XML方式：
+123456&lt;bean id=&quot;knight&quot; class=&quot;com.springinaction....
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2019/05/13/python爬取Unsplash以json格式写入文件/" title="python爬取Unsplash以json格式写入文件">				
+							<a href="/2019/05/11/Spring实战-一-读书笔记/" title="Spring实战<一> 读书笔记">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/blogs/spring.jpg" alt="python爬取Unsplash以json格式写入文件">
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/blogs/spring.jpg" alt="Spring实战&lt;一&gt; 读书笔记">
 							</a>
 						</div>
 					</li>											
